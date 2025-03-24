@@ -1,0 +1,22 @@
+
+<div class="item-card">
+  <div class="item-image">
+    <% if item.image_paths.present? %>
+      <img src="<%= asset_path(item.image_paths.first) %>" alt="<%= item.name %>" class="item-image">
+    <% else %>
+      <img src="<%= asset_path("default.jpg") %>" alt="Default Image" class="item-image">
+    <% end %>
+  </div>
+
+  <h2><%= link_to item.name, item_path(item) %></h2>
+  <p><strong>Price:</strong> <%= number_to_currency(item.price) %></p>
+  <p><%= truncate(item.description, length: 100) %></p>
+
+  <%# if item.reviews.any? %>
+<!--    <p><strong>Average Rating:</strong> <%#= item.reviews.average(:rating).round(1) %> ⭐</p>-->
+  <%# else %>
+<!--    <p>No reviews yet</p>-->
+  <%# end %>
+
+  <%= link_to "View Item", item_path(item), class: "btn btn-view" %>
+</div>

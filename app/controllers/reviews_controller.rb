@@ -15,8 +15,10 @@ class ReviewsController < ApplicationController
   def show; end
 
   def destroy
-    @review.destroy
-    redirect_to root_path, notice: 'Отзыв удален' # TODO: редирект на страницу продукта
+    review_item_id = @review.item_id
+    @review.destroy!
+
+    redirect_to item_path(review_item_id), notice: 'Отзыв удален'
   end
 
   private

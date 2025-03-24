@@ -1,0 +1,20 @@
+<!--<div class="mt-sm container">-->
+
+  <%# @items.each do |item| %>
+<!--    <div class="mt-sm container">-->
+<!--      <p class="mb text-sm text-grey">-->
+<!--        Item-->
+<!--      </p>-->
+
+      <%#= render partial: 'item', object: item %>
+<!--    </div>-->
+  <%# end %>
+<!--</div>-->
+
+<h2>All Items</h2>
+<div class="items-grid">
+  <% @items.each do |item| %>
+    <%= render partial: "items/item", locals: { item: item } %>
+  <% end %>
+</div>
+

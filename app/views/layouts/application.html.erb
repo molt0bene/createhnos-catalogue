@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CreatehnosCatalogue</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Creative Technologies Catalogue</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+<div class="container mt-lg ">
+  <div class="navbar">
+    <p class="text-sm text-bold"><%= link_to 'CREATEHNOS', root_path %></p>
+<!--    <div>-->
+      <%# if current_user.present? %>
+        <%#= link_to wrap(current_user.nickname), user_path(current_user.nickname), class: 'mr-sm' %>
+        <%#= button_to 'Выйти', session_path, method: :delete, class: 'button button-main' %>
+      <%# else %>
+        <%#= link_to 'Регистрация', new_user_path, class: 'button button-yellow mr-sm' %>
+        <%#= link_to 'Вход', new_session_path, class: 'button button-yellow' %>
+      <%# end %>
+<!--    </div>-->
+  </div>
+  <h1>Hello!</h1>
+  <% if flash[:notice].present? %>
+    <p class="mb mt message message-notice"><%= flash[:notice] %></p>
+  <% elsif flash[:alert].present? %>
+    <p class="mb mt message message-alert"><%= flash[:alert] %></p>
+  <% end %>
+
+  <%= yield %>
+</div>
+</body>
 </html>
