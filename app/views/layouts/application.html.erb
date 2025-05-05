@@ -31,6 +31,24 @@
   <% end %>
 
   <%= yield %>
+
+  <div id="assistant-wrapper">
+    <img src="<%= asset_path('assistant.png') %>" alt="Помощник" id="assistant-avatar" />
+
+    <div id="chat-box" class="hidden">
+      <div id="chat-header">
+        Виртуальный помощник
+        <button id="close-chat">&times;</button>
+      </div>
+      <div id="chat-messages">
+        <p><strong>Помощник:</strong> Привет! Чем могу помочь?</p>
+      </div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Напишите сообщение..." autocomplete="off" />
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>нек--прз
 </div>
 </body>
 </html>
