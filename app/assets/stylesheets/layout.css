@@ -1,4 +1,4 @@
-.container, .navbar {
+.container {
   padding: 20px;
 }
 
@@ -6,19 +6,42 @@
   width: 100%;
   margin: 0 auto;
   padding: 20px;
-  background: #f4f4f4;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 30px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
+  max-height: 70px;
   align-items: center;
-  background-color: #370617;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-between;
 }
 
-.navbar a {
-  /*color: white;*/
-  text-decoration: none;
+.section {
+  margin-top: 7%;
+  margin-left: 12%;
+  margin-right: 12%;
+  overflow: auto;
+}
+
+.header-line {
+  min-height: 25px;
+  background-color: #FFF4E5;
+}
+
+.logo {
+  padding-left: 6%;
+  clear: both;
+}
+
+.nav-title {
+  padding-left: 8px;
+  clear: both;
+}
+
+.nav-right-link {
+  padding-right: 8px;
+  clear: both;
+  float: right;
 }

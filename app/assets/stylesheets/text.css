@@ -1,9 +1,11 @@
-a, button {
-  color: #333333;
+.title-lg {
+  font-size: 1.75rem;
+  /*I need 26px, 1rem=16px*/
 }
 
-.title-lg {
-  font-size: 175%;
+.nav-element-text a {
+  font-size: 1.2rem;
+  color: #4A4A4A;
 }
 
 .title-md, .title {
@@ -18,18 +20,7 @@ a, button {
   font-size: 80%;
 }
 
-.text-grey {
-  color: #a0a0a0;
-}
-
-.text-red {
-  color: #d00000;
-}
-
-.text-dark-red {
-  color: #9d0208;
-}
-
 .text-bold {
   font-weight: bold;
 }
+

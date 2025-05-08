@@ -10,12 +10,19 @@
 </head>
 
 <body>
-<div class="container mt-lg ">
-  <div class="navbar">
-    <p class="text-sm text-bold"><%= link_to 'CREATEHNOS', root_path %></p>
-  </div>
+<div class="header-line">&nbsp;</div>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/"><%= image_tag 'logo.svg', alt: 'Creative Electronic Technology' %></a>
+    </div>
+    <div class="nav-title">
+      <p class="nav-element-text text-bold">
+        <%= link_to 'Creative Electronic Technology', root_path %>
+      </p>
+    </div>
+  </nav>
 
-
+<div class="container mt-md ">
   <h1>Hello!</h1>
   <% if flash[:notice].present? %>
     <p class="mb mt message message-notice"><%= flash[:notice] %></p>
