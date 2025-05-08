@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         const assistantReply = document.createElement('p');
         assistantReply.innerHTML = `<strong>Помощник:</strong> Я вас понял!`;
-        chatMessages.appendChild(assistantReply);3-=wq
+        chatMessages.appendChild(assistantReply);
 
         // Автоскролл вниз
         chatMessages.scrollTop = chatMessages.scrollHeight;

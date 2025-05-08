@@ -3,7 +3,7 @@
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   background: #f4f4f4;
@@ -13,7 +13,7 @@
 
 .navbar {
   align-items: center;
-  /*background-color: #370617;*/
+  background-color: #370617;
   display: flex;
   justify-content: space-between;
 }

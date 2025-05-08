@@ -13,16 +13,9 @@
 <div class="container mt-lg ">
   <div class="navbar">
     <p class="text-sm text-bold"><%= link_to 'CREATEHNOS', root_path %></p>
-<!--    <div>-->
-      <%# if current_user.present? %>
-        <%#= link_to wrap(current_user.nickname), user_path(current_user.nickname), class: 'mr-sm' %>
-        <%#= button_to 'Выйти', session_path, method: :delete, class: 'button button-main' %>
-      <%# else %>
-        <%#= link_to 'Регистрация', new_user_path, class: 'button button-yellow mr-sm' %>
-        <%#= link_to 'Вход', new_session_path, class: 'button button-yellow' %>
-      <%# end %>
-<!--    </div>-->
   </div>
+
+
   <h1>Hello!</h1>
   <% if flash[:notice].present? %>
     <p class="mb mt message message-notice"><%= flash[:notice] %></p>
@@ -31,24 +24,5 @@
   <% end %>
 
   <%= yield %>
-
-  <div id="assistant-wrapper">
-    <img src="<%= asset_path('assistant.png') %>" alt="Помощник" id="assistant-avatar" />
-
-    <div id="chat-box" class="hidden">
-      <div id="chat-header">
-        Виртуальный помощник
-        <button id="close-chat">&times;</button>
-      </div>
-      <div id="chat-messages">
-        <p><strong>Помощник:</strong> Привет! Чем могу помочь?</p>
-      </div>
-      <form id="chat-form">
-        <input type="text" id="chat-input" placeholder="Напишите сообщение..." autocomplete="off" />
-        <button type="submit">Отправить</button>
-      </form>
-    </div>
-  </div>нек--прз
 </div>
 </body>
-</html>

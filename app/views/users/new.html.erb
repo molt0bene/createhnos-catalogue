@@ -1,0 +1,38 @@
+<h1>Новый пользователь</h1>
+
+<%= form_with(model: @user, local: true) do |form| %>
+  <% if @user.errors.any? %>
+    <div class="error-messages">
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :password %>
+    <%= form.email_field :password, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :password_confirmation %>
+    <%= form.email_field :password_confirmation, class: "form-control" %>
+  </div>
+
+  <div class="form-actions">
+    <%= form.submit "Создать пользователя", class: "btn btn-primary" %>
+    <%= link_to 'Назад к списку пользователей', users_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>
