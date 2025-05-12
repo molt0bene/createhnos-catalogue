@@ -16,6 +16,21 @@
   background-color: #FFFFFF;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   display: flex;
+  justify-content: space-between;
+}
+
+.left-block {
+  padding-left: 6%;
+  display: inline-flex;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.right-block {
+  padding-right: 6%;
+  display: inline-flex;
+  white-space: nowrap;
+  align-items: center;
 }
 
 .section {
@@ -31,17 +46,13 @@
 }
 
 .logo {
-  padding-left: 6%;
   clear: both;
 }
 
 .nav-title {
   padding-left: 8px;
   clear: both;
+  display: inline;
 }
 
-.nav-right-link {
-  padding-right: 8px;
-  clear: both;
-  float: right;
-}
+

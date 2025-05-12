@@ -8,6 +8,10 @@
   color: #4A4A4A;
 }
 
+.nav-right-link a {
+  padding-left: 8px;
+}
+
 .title-md, .title {
   font-size: 150%;
 }
@@ -22,5 +26,13 @@
 
 .text-bold {
   font-weight: bold;
+}
+
+.text-semi-bold {
+  font-weight: 400;
+}
+
+.mr-sm {
+  margin-right: 2vw;
 }
 

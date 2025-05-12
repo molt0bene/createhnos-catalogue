@@ -12,13 +12,23 @@
 <body>
 <div class="header-line">&nbsp;</div>
   <nav class="navbar">
-    <div class="logo">
-      <a href="/"><%= image_tag 'logo.svg', alt: 'Creative Electronic Technology' %></a>
+    <div class="left-block">
+      <div class="logo">
+        <a href="/"><%= image_tag 'logo.svg', alt: 'Creative Electronic Technology' %></a>
+      </div>
+      <div class="nav-title">
+        <p class="nav-element-text text-bold">
+          <%= link_to 'Creative Electronic Technology', root_path %>
+        </p>
+      </div>
     </div>
-    <div class="nav-title">
-      <p class="nav-element-text text-bold">
-        <%= link_to 'Creative Electronic Technology', root_path %>
-      </p>
+    <div class="right-block">
+      <div class="nav-element-text nav-right-link text-semi-bold mr-sm">
+        <a href="#">Навигация &#9662;</a>
+      </div>
+      <div class="nav-element-text nav-right-link text-semi-bold">
+        <a href="#contacts">Контакты</a>
+      </div>
     </div>
   </nav>
 
