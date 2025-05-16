@@ -1,15 +1,17 @@
 .items-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
+  gap: 47px;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  /*padding: 0px;*/
 }
 
 .item-card {
   background: white;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
