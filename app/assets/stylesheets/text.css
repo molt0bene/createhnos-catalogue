@@ -35,10 +35,18 @@
 .custom-list {
   list-style: none;
   padding-left: 0;
+  position: absolute;
+  top: 160%;
 }
 
 .custom-list li {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 1em;
+  font-size: 130%;
+}
+
+.custom-list i {
+  color: #F29515;
+  width: 24px;
 }

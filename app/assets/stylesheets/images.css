@@ -1,15 +1,36 @@
 .full-width-banner {
+  display: block;
   width: 100%;
+  height: auto;
+}
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
 }
 
 .image-with-text {
   position: relative;
+  overflow: hidden;
 }
 
 .on-image-text {
   position: absolute;
   top: 10%;
   left: 6%;
+  width: 100%;
+  height: 100%;
+  /* чтобы текст над картинкой был чуть “лёгким” */
+  pointer-events: none;
+}
+
+.parallax-text {
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  transform: translateY(-50%);
+  will-change: transform;
+  /* pointer-events: auto; если вам нужны hover-события */
 }
 
 .map-card {

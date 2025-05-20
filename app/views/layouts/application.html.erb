@@ -47,4 +47,39 @@
     <p>&copy; 2023-2025 Createhnos. Все права защищены.</p>
   </footer>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const containers = document.querySelectorAll('.parallax-container');
+    const speed     = 0.5;
+    const maxOffset = 50;
+
+    function clamp(val, min, max) {
+      return Math.min(Math.max(val, min), max);
+    }
+
+    function updateParallax() {
+      const windowH = window.innerHeight;
+
+      containers.forEach(container => {
+        const textBlock = container.querySelector('.parallax-text');
+        const rect      = container.getBoundingClientRect();
+
+        if (rect.bottom < 0 || rect.top > windowH) return;
+        const rawMove = ( (windowH - rect.top) * speed )
+          - (rect.height * speed / 2);
+
+        const moveY = clamp(rawMove, -maxOffset, maxOffset);
+
+        // Центрируем по X и сдвигаем по Y в пределах maxOffset
+        textBlock.style.transform =
+          `translateY(calc(-50% + ${moveY}px))`;
+      });
+    }
+
+    window.addEventListener('scroll', updateParallax);
+    window.addEventListener('resize', updateParallax);
+    updateParallax();
+  });
+</script>
 </body>

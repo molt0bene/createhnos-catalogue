@@ -1,0 +1,26 @@
+.form-text-field {
+  border: 3px solid #A7BEEA;
+  border-radius: 20px;
+  width: 25%;
+  height: 3em;
+  padding-left: 2em;
+  font-size: 105%;
+}
+
+input::placeholder {
+  color: #9699A5;
+  opacity: 1;
+}
+
+.button {
+  background-color: #6E95DC;
+  color: #FFFFFF;
+  border: 3px solid #A7BEEA;
+  border-radius: 20px;
+  width: auto;
+  height: 3.5em;
+  text-align: left;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 110%;
+}

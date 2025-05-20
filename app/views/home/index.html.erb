@@ -13,23 +13,36 @@
   <h2>О компании</h2>
 </div>
 
-<div class="image-with-text">
-  <img class="full-width-banner" src="<%= asset_path("about_notext.jpg") %>" alt="about banner">
+<div class="image-with-text parallax-container">
+  <img class="full-width-banner" src="<%= asset_path("about_smaller.jpg") %>" alt="about banner">
   <div class="on-image-text">
-    <h2 class="mb-sm title-lg">КРЕАТИВ ЭЛЕКТРОНИК ТЕХНОЛОДЖИ</h2>
-    <h3 class="mt-sm title-md text-semi-bold">Импорт доступной техники из Китая</h3>
+    <div class="parallax-text">
+      <h2 class="mb-sm title-lg">КРЕАТИВ ЭЛЕКТРОНИК ТЕХНОЛОДЖИ</h2>
+      <h3 class="mt-sm title-md text-semi-bold">Импорт доступной техники из Китая</h3>
 
-    <ul class="custom-list">
-      <li><i class="fa-solid fa-square-check"></i>Качество с 2023 года</li>
-      <li><i class="fas fa-film"></i>Опытная команда</li>
-      <li><i class="fas fa-book"></i>Актуальные технологии</li>
-      <li><i class="fas fa-book"></i>Надёжность и сервис</li>
-    </ul>
+      <ul class="custom-list">
+        <li><i class="fa-solid fa-gem"></i>Качество с 2023 года</li>
+        <li><i class="fa-solid fa-user"></i>Опытная команда</li>
+        <li><i class="fa-solid fa-network-wired"></i>Актуальные технологии</li>
+        <li><i class="fa-solid fa-hand"></i>Надёжность и сервис</li>
+      </ul>
+    </div>
   </div>
 </div>
 <div class="section" id="payments">
   <h2>Оплата и доставка</h2>
   <p class="mt-sm mb-md title-sm">Для того, чтобы оформить заказ, оставьте ваши <b>контактные данные</b>:</p>
+
+  <%= form_with model: @order_request do |form| %>
+    <p><%= form.text_field :first_name, placeholder: 'Имя', class: 'form-text-field' %>
+       <%= form.text_field :last_name, placeholder: 'Фамилия', class: 'form-text-field' %></p>
+    <p><%= form.text_field :email, placeholder: 'Email', class: 'form-text-field' %>
+       <%= form.text_field :phone, placeholder: 'Телефон', class: 'form-text-field' %></p>
+
+    <p>
+      <%= form.submit "Отправить!", class: 'button text-semi-bold' %>
+    </p>
+  <% end %>
 </div>
 
 <div class="section" id="contacts">
