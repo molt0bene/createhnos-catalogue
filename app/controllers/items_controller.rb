@@ -1,7 +1,4 @@
 class ItemsController < ApplicationController
-  def create # TODO: check admin rights
-  end
-
   def update
   end
 
@@ -9,7 +6,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @question = Item.find(params[:id])
+    @item = Item.find(params[:id])
   end
 
   def index

@@ -29,6 +29,35 @@
   margin-bottom: 10px;
 }
 
+.item-info-block {
+  float: left;
+  width: 50%;
+}
+
+.item-right-image {
+  float: right;
+  width: 50%;
+}
+
+.item-right-image img {
+  margin-top: 27px;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.item-title {
+  font-family: "Heading Now", sans-serif;
+  font-size: 27px;
+  margin-bottom: 0.25em;
+}
+
+.item-article {
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 20px;
+  margin-top: 0;
+}
+
 .btn-view {
   display: inline-block;
   background-color: #007bff;

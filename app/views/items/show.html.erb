@@ -1,0 +1,16 @@
+<div class="section mt-lg">
+  <div class="item-info-block">
+    <p class="item-title"><%= @item.name %></p>
+    <p class="item-article">Артикул <%= @item.article %></p>
+
+    <p class="mt-md">
+      <%= @item.description %>
+    </p>
+  </div>
+
+  <div class="item-right-image">
+    <% if @item.image_paths.present? %>
+      <img src="<%= asset_path(@item.image_paths.first) %>" alt="<%= @item.name %>">
+    <% end %>
+  </div>
+</div>

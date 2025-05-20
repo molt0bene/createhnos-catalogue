@@ -12,6 +12,7 @@
  *
  *= require_self
  *= require assistant
+ *= require images
  *= require items
  *= require layout
  *= require spacing
@@ -33,13 +34,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.user-profile {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .item-list {

@@ -1,0 +1,47 @@
+<img class="full-width-banner" src="<%= asset_path("new_arrivals.jpg") %>" alt="new arrivals banner">
+
+<div class="section" id="catalogue">
+  <h2>Каталог</h2>
+  <div class="items-grid">
+    <% @items.each do |item| %>
+      <%= render partial: "items/item", locals: { item: item } %>
+    <% end %>
+  </div>
+</div>
+
+<div class="section" id="about" style="margin-bottom: 2% !important">
+  <h2>О компании</h2>
+</div>
+
+<div class="image-with-text">
+  <img class="full-width-banner" src="<%= asset_path("about_notext.jpg") %>" alt="about banner">
+  <div class="on-image-text">
+    <h2 class="mb-sm title-lg">КРЕАТИВ ЭЛЕКТРОНИК ТЕХНОЛОДЖИ</h2>
+    <h3 class="mt-sm title-md text-semi-bold">Импорт доступной техники из Китая</h3>
+
+    <ul class="custom-list">
+      <li><i class="fa-solid fa-square-check"></i>Качество с 2023 года</li>
+      <li><i class="fas fa-film"></i>Опытная команда</li>
+      <li><i class="fas fa-book"></i>Актуальные технологии</li>
+      <li><i class="fas fa-book"></i>Надёжность и сервис</li>
+    </ul>
+  </div>
+</div>
+<div class="section" id="payments">
+  <h2>Оплата и доставка</h2>
+  <p class="mt-sm mb-md title-sm">Для того, чтобы оформить заказ, оставьте ваши <b>контактные данные</b>:</p>
+</div>
+
+<div class="section" id="contacts">
+  <h2>Контакты</h2>
+  <p class="title-sm mb-sm">Телефон: +7 (901) 185-22-70</p>
+  <p class="title-sm mt-sm mb-md">Почта: info@createhnology.ru</p>
+
+  <div class="map-card mb-md">
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0b15c7b32d75b8fa7a346864586e5963f770da743f858a0093bb94e7619a5be3&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+    <div class="on-map-text">
+      <p class="mb-sm title-sm">м. Нагатинская, Варшавское шоссе 39Бс1, 115434</p>
+      <h3 class="mt-sm">пн–сб 10:00–19:00</h3>
+    </div>
+  </div>
+</div>

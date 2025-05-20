@@ -1,0 +1,27 @@
+.full-width-banner {
+  width: 100%;
+}
+
+.image-with-text {
+  position: relative;
+}
+
+.on-image-text {
+  position: absolute;
+  top: 10%;
+  left: 6%;
+}
+
+.map-card {
+  position: relative;
+  background: white;
+  padding: 1em 1em 8em;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.1);
+}
+
+.on-map-text {
+  position: absolute;
+  top: 80%;
+  left: 6%;
+}
