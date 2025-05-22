@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @reviews = @item.reviews.last(10)
-    @review = Review.new
+    @review = @item.reviews.build
   end
 
   def index

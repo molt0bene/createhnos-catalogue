@@ -50,3 +50,13 @@
   color: #F29515;
   width: 24px;
 }
+
+.message {
+  width: 100%;
+  padding: 1% 6%;
+  font-weight: bolder;
+}
+
+.message-notice {
+  background-color: rgba(159, 199, 130, 0.5);
+}
