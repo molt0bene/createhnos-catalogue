@@ -259,7 +259,7 @@ DEPENDENCIES
   capistrano-rails
   importmap-rails
   jbuilder
-  psych (~> 4.0.6)
+  psych (~> 4.0)
   puma (>= 5.0)
   rails (~> 7.1.5, >= 7.1.5.1)
   sprockets-rails
