@@ -40,7 +40,8 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_20_093207) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "user_id"
+    t.string "first_name"
+    t.string "last_name"
     t.integer "item_id"
     t.float "rating"
     t.text "comment"

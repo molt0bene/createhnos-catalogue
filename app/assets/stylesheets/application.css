@@ -16,6 +16,8 @@
  *= require images
  *= require items
  *= require layout
+ *= require navbar
+ *= require review
  *= require spacing
  *= require text
  */
@@ -44,18 +46,6 @@ a:hover {
 
 .item-list li {
   margin: 10px 0;
-}
-
-.reviews {
-  margin-top: 30px;
-}
-
-.review {
-  background-color: #fff;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {

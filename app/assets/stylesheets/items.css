@@ -31,7 +31,10 @@
 
 .item-info-block {
   float: left;
-  width: 50%;
+  width: 40%;
+  padding-right: 10%;
+  font-size: 120%;
+  font-weight: lighter;
 }
 
 .item-right-image {

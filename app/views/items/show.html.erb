@@ -3,7 +3,7 @@
     <p class="item-title"><%= @item.name %></p>
     <p class="item-article">Артикул <%= @item.article %></p>
 
-    <p class="mt-md">
+    <p class="mt-lg item-description">
       <%= @item.description %>
     </p>
   </div>
@@ -11,6 +11,35 @@
   <div class="item-right-image">
     <% if @item.image_paths.present? %>
       <img src="<%= asset_path(@item.image_paths.first) %>" alt="<%= @item.name %>">
+    <% end %>
+  </div>
+</div>
+
+<div class="section mt-lg">
+  <h3>Последние отзывы на товар <%= @item.name %></h3>
+
+  <div class="reviews">
+    <% @reviews.each do |review| %>
+      <div class="review">
+        <div class="review-contents">
+          <p class="review-user-name"><%= review.user_name %></p>
+          <%= review.comment %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="new-review-form">
+    <p class="mt-sm mb-md title-sm">Оставьте ваш отзыв:</p>
+
+    <%= form_with model: @review do |form| %>
+      <p><%= form.text_field :first_name, placeholder: 'Имя*', class: 'form-text-field' %>
+        <%= form.text_field :last_name, placeholder: 'Фамилия', class: 'form-text-field' %></p>
+      <p><%= form.text_field :email, placeholder: 'Email*', class: 'form-text-field' %>
+        <%= form.text_field :comment, placeholder: 'Текст отзыва*', class: 'form-text-field' %></p>
+      <p>
+        <%= form.submit "Отправить!", class: 'button text-semi-bold' %>
+      </p>
     <% end %>
   </div>
 </div>

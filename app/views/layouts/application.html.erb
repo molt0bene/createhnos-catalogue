@@ -26,7 +26,12 @@
     </div>
     <div class="right-block">
       <div class="nav-element-text nav-right-link text-semi-bold mr-sm">
-        <a href="#">Навигация &#9662;</a>
+        <a href="#" id="navToggle">Навигация <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu" id="navMenu">
+          <li><a href="#section1">Раздел 1</a></li>
+          <li><a href="#section2">Раздел 2</a></li>
+          <li><a href="#section3">Раздел 3</a></li>
+        </ul>
       </div>
       <div class="nav-element-text nav-right-link text-semi-bold">
         <a href="#contacts">Контакты</a>
@@ -80,6 +85,34 @@
     window.addEventListener('scroll', updateParallax);
     window.addEventListener('resize', updateParallax);
     updateParallax();
+  });
+</script>
+<script>
+  console.log('toggle click')
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleLink = document.getElementById('navToggle');
+    const menu       = document.getElementById('navMenu');
+    const icon       = toggleLink.querySelector('i');
+
+    toggleLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      // переключаем видимость меню
+      menu.classList.toggle('show');
+      // меняем стрелку
+      icon.classList.toggle('fa-chevron-down');
+      icon.classList.toggle('fa-chevron-up');
+    });
+
+    // Скрывать меню при клике вне его
+    document.addEventListener('click', (e) => {
+      if (!toggleLink.contains(e.target) && !menu.contains(e.target)) {
+        if (menu.classList.contains('show')) {
+          menu.classList.remove('show');
+          icon.classList.add('fa-chevron-down');
+          icon.classList.remove('fa-chevron-up');
+        }
+      }
+    });
   });
 </script>
 </body>

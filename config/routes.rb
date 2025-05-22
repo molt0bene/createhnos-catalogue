@@ -3,6 +3,5 @@ Rails.application.routes.draw do
 
   resources :home, only: :index
   resources :items
-  resources :users, except: [:index]
-  resources :reviews, only: %i[new create destroy show]
+  resources :reviews, only: %i[new create show]
 end

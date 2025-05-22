@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: %i[show destroy]
+  def new; end
 
   def create
     @review = Review.new(create_params)
@@ -14,20 +14,9 @@ class ReviewsController < ApplicationController
 
   def show; end
 
-  def destroy
-    review_item_id = @review.item_id
-    @review.destroy!
-
-    redirect_to item_path(review_item_id), notice: 'Отзыв удален'
-  end
-
   private
 
-  def set_review
-    @review = Review.find_by(id: params[:id])
-  end
-
   def create_params
-    params.require(:review).permit(:user_id, :rating, :comment)
+    params.require(:review).permit(:first_name, :last_name, :rating, :comment)
   end
 end
