@@ -131,7 +131,6 @@ GEM
       net-smtp
     marcel (1.0.4)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.8)
     minitest (5.25.4)
     msgpack (1.8.0)
     mutex_m (0.3.0)
@@ -217,10 +216,10 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
-    sqlite3 (2.0.4)
-      mini_portile2 (~> 2.8.0)
+    sqlite3 (2.0.4-aarch64-linux-gnu)
     sqlite3 (2.0.4-arm64-darwin)
     sqlite3 (2.0.4-x86_64-darwin)
+    sqlite3 (2.0.4-x86_64-linux-gnu)
     sshkit (1.24.0)
       base64
       logger
@@ -259,7 +258,7 @@ DEPENDENCIES
   capistrano-rails
   importmap-rails
   jbuilder
-  psych (~> 4.0)
+  psych
   puma (>= 5.0)
   rails (~> 7.1.5, >= 7.1.5.1)
   sprockets-rails
@@ -269,7 +268,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 3.0.6p216
+   ruby 3.3.0p0
 
 BUNDLED WITH
    2.5.23

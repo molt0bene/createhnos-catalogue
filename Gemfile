@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.0.6"
+ruby "3.3.0"
 
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem "bootsnap", require: false
@@ -22,5 +22,5 @@ group :development, :test do
   gem "byebug"
 end
 
-gem 'psych', '~> 4.0', require: false
+gem 'psych', require: false
 
