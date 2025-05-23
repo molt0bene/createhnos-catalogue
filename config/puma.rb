@@ -14,6 +14,16 @@ threads min_threads_count, max_threads_count
 rails_env = ENV.fetch("RAILS_ENV") { "development" }
 
 if rails_env == "production"
+  directory '/home/deploy/apps/createhnologies/current'
+  pidfile '/home/deploy/apps/createhnologies/shared/tmp/pids/puma.pid'
+  state_path '/home/deploy/apps/createhnologies/shared/tmp/pids/puma.state'
+
+  stdout_redirect '/home/deploy/apps/createhnologies/shared/log/puma.stdout.log',
+                  '/home/deploy/apps/createhnologies/shared/log/puma.stderr.log',
+                  true
+
+  bind 'unix:///home/deploy/apps/createhnologies/shared/tmp/sockets/puma.sock'
+
   # If you are running more than 1 thread per process, the workers count
   # should be equal to the number of processors (CPU cores) in production.
   #
