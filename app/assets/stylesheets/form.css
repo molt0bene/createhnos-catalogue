@@ -24,3 +24,20 @@ input::placeholder {
   padding-right: 2em;
   font-size: 110%;
 }
+
+.button-main {
+  display: flex;
+  background-color: #FFFFFF;
+  color: #4A4A4A;
+  border-radius: 20px;
+  font-weight: 400;
+  width: auto;
+  height: 4em;
+  padding-left: 3em;
+  padding-right: 3em;
+  font-size: 120%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.1);
+}
