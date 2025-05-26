@@ -1,0 +1,50 @@
+@media (max-width: 1500px) {
+  .on-image-btn {
+    max-width: 100px;
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .on-image-btn {
+    max-width: 100px;
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-element-text a { font-size: 1rem; }
+
+  .on-image-btn {
+    max-width: 80px;
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  .on-image-btn {
+    max-width: 80px;
+    font-size: 75%;
+  }
+
+  .nav-element-text a { font-size: 0.9rem; }
+}
+
+@media (max-width: 575px) {
+  h2 { font-size: 100% }
+
+  .on-image-btn {
+    max-width: 80px;
+    font-size: 60%;
+  }
+
+  .nav-element-text a { font-size: 0.75rem; }
+}
+
+@media (max-width: 440px) {
+  .nav-element-text a { font-size: 0.6rem; }
+
+  .on-image-btn {
+    font-size: 40%;
+  }
+}

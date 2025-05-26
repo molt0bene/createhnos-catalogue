@@ -25,16 +25,9 @@
 
 .on-image-btn {
   position: absolute;
+  max-width: 150px;
   top: 55%;
-  left: 52%;
-}
-
-@media (max-width: 1200px) {
-  .on-image-btn {
-    position: absolute;
-    top: 55%;
-    left: 46%;
-  }
+  right: 35%;
 }
 
 .parallax-text {

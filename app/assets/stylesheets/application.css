@@ -20,6 +20,8 @@
  *= require review
  *= require spacing
  *= require text
+
+  *= require media
  */
 
 html {
