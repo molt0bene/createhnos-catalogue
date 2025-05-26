@@ -38,7 +38,7 @@
   <h2>Оплата и доставка</h2>
   <p class="mt-sm mb-md title-sm">Для того, чтобы оформить заказ, оставьте ваши <b>контактные данные</b>:</p>
 
-  <%= form_with model: @order_request do |form| %>
+  <%= form_with model: @order_request, local: true do |form| %>
     <p><%= form.text_field :first_name, placeholder: 'Имя', class: 'form-text-field' %>
        <%= form.text_field :last_name, placeholder: 'Фамилия', class: 'form-text-field' %></p>
     <p><%= form.text_field :email, placeholder: 'Email', class: 'form-text-field' %>

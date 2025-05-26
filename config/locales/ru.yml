@@ -1,0 +1,22 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        order_request:
+          attributes:
+            first_name:
+              blank: "не может быть пустым"
+            last_name:
+              blank: "не может быть пустым"
+            email:
+              blank: "не может быть пустым"
+              invalid: "в неверном формате"
+            phone:
+              blank: "не может быть пустым"
+              invalid: "должен состоять из 10 цифр"
+    attributes:
+      order_request:
+        first_name: "Имя"
+        last_name:  "Фамилия"
+        email:      "Email"
+        phone:      "Телефон"
