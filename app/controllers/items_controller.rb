@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
-    @reviews = @item.reviews.last(10)
+    @reviews = @item.reviews.order(created_at: :desc).first(10)
     @review = @item.reviews.build
   end
 

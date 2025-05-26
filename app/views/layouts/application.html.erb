@@ -131,7 +131,7 @@
 
         labels.forEach(l => {
           const lval = parseInt(l.dataset.value, 10);
-          if (lval >= val) l.classList.add('selected');
+          if (lval <= val) l.classList.add('selected');
           else             l.classList.remove('selected');
         });
 

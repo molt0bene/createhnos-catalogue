@@ -1,5 +1,4 @@
 .reviews {
-  margin-top: 30px;
   width: 40%;
   float: left;
 }
@@ -12,7 +11,7 @@
 }
 
 .review-contents {
-  padding: 40px;
+  padding: 10px 40px 20px;
 }
 
 .review-user-name {
@@ -23,4 +22,9 @@
 .new-review-form {
   width: 50%;
   float: right;
+}
+
+.null-state-text {
+  margin-top: 30px;
+  width: 40%;
 }

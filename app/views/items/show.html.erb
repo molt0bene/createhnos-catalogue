@@ -18,8 +18,9 @@
 <div class="section mt-lg">
   <h3>Последние отзывы на товар <%= @item.name %></h3>
 
-  <div class="reviews">
-    <% @reviews.each do |review| %>
+  <% if @reviews.any? %>
+    <div class="mt-md reviews">
+      <% @reviews.each do |review| %>
       <div class="review">
         <div class="review-contents">
           <p class="review-user-name mt-sm mb-sm"><%= review.user_name %></p>
@@ -29,15 +30,22 @@
           <%= review.comment %>
         </div>
       </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="null-state-text">
+      <div class="title-sm">
+        <p class="mt-sm">Пока никто не оставил отзыв. Станьте первым!</p>
+      </div>
+    </div>
+  <% end %>
 
   <div class="new-review-form">
     <p class="mt-sm mb-md title-sm">Оставьте ваш отзыв:</p>
 
     <%= form_with url: item_reviews_path(@item), scope: :review, local: true do |form| %>
       <div class="star-rating">
-        <% (1..5).each do |i| %>
+        <% (5).downto(1).each do |i| %>
           <%= form.radio_button :rating, i, id: "star-#{i}", class: "star-input" %>
           <label for="star-#{i}" class="star-label" data-value="<%= i %>">
             <i class="fa-solid fa-star"></i>
