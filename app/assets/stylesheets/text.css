@@ -60,3 +60,7 @@
 .message-notice {
   background-color: rgba(159, 199, 130, 0.5);
 }
+
+.message-alert {
+  background-color: rgba(255, 152, 152, 0.5);
+}
