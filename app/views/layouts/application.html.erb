@@ -115,4 +115,30 @@
     });
   });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.star-rating');
+    const labels    = Array.from(container.querySelectorAll('.star-label'));
+    const inputs    = Array.from(container.querySelectorAll('.star-input'));
+
+    labels.forEach(label => {
+      label.addEventListener('click', () => {
+        const val = parseInt(label.dataset.value, 10);
+
+        inputs.forEach(input => {
+          input.checked = parseInt(input.value, 10) === val;
+        });
+
+        labels.forEach(l => {
+          const lval = parseInt(l.dataset.value, 10);
+          if (lval >= val) l.classList.add('selected');
+          else             l.classList.remove('selected');
+        });
+
+        container.classList.add('has-selection');
+      });
+    });
+  });
+</script>
 </body>
+</html>

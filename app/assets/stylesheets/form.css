@@ -12,6 +12,11 @@ input::placeholder {
   opacity: 1;
 }
 
+.review-stars {
+  font-size: 130%;
+  gap: 0.5em;
+}
+
 .button {
   background-color: #6E95DC;
   color: #FFFFFF;
@@ -41,3 +46,35 @@ input::placeholder {
   align-items: center;
   box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.1);
 }
+
+.star-rating {
+  display: flex;
+  justify-content: left;
+  direction: rtl;
+  gap: 0.5rem;
+}
+
+.star-input {
+  display: none;
+}
+
+.star-label i {
+  font-size: 2rem;
+  color: #ccc;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.star-rating:not(.has-selection) .star-label:hover i,
+.star-rating:not(.has-selection) .star-label:hover ~ .star-label i {
+  color: #FFB15F;
+}
+
+.star-label.selected i {
+  color: #FFB15F;
+}
+
+.filled {
+  color: #FFB15F;
+}
+

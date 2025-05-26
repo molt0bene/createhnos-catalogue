@@ -22,7 +22,10 @@
     <% @reviews.each do |review| %>
       <div class="review">
         <div class="review-contents">
-          <p class="review-user-name"><%= review.user_name %></p>
+          <p class="review-user-name mt-sm mb-sm"><%= review.user_name %></p>
+          <div class="review-stars mt-sm mb-md">
+            <%= render_stars(review.rating.to_i) %>
+          </div>
           <%= review.comment %>
         </div>
       </div>
@@ -33,6 +36,15 @@
     <p class="mt-sm mb-md title-sm">Оставьте ваш отзыв:</p>
 
     <%= form_with url: item_reviews_path(@item), scope: :review, local: true do |form| %>
+      <div class="star-rating">
+        <% (1..5).each do |i| %>
+          <%= form.radio_button :rating, i, id: "star-#{i}", class: "star-input" %>
+          <label for="star-#{i}" class="star-label" data-value="<%= i %>">
+            <i class="fa-solid fa-star"></i>
+          </label>
+        <% end %>
+      </div>
+
       <p><%= form.text_field :first_name, placeholder: 'Имя*', class: 'form-text-field' %>
         <%= form.text_field :last_name, placeholder: 'Фамилия', class: 'form-text-field' %></p>
       <p><%= form.text_field :email, placeholder: 'Email*', class: 'form-text-field' %>
