@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
       redirect_to item_path(@item), notice: 'Спасибо за отзыв!'
     else
       @reviews = @item.reviews.order(created_at: :desc).first(10)
-      flash.now[:alert] = "Возникла ошибка при добавлении отзыва"
+      flash.now[:alert] = "Возникла ошибка при добавлении отзыва: #{@review.errors.full_messages.join(', ')}"
       render 'items/show'
     end
   end

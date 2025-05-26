@@ -14,9 +14,25 @@ ru:
             phone:
               blank: "не может быть пустым"
               invalid: "должен состоять из 10 цифр"
+        review:
+          attributes:
+            first_name:
+              blank: "не может быть пустым"
+            rating:
+              blank: "не может быть пустой"
+            email:
+              blank: "не может быть пустым"
+              invalid: "в неверном формате"
+            comment:
+              blank: "не может быть пустым"
     attributes:
       order_request:
         first_name: "Имя"
         last_name:  "Фамилия"
         email:      "Email"
         phone:      "Телефон"
+      review:
+        first_name: "Имя"
+        rating: "Оценка"
+        email: "Email"
+        comment: "Текст отзыва"
