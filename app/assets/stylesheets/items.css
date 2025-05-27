@@ -1,6 +1,6 @@
 .items-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 0.5fr));
   gap: 47px;
   margin-top: 2.5em;
   margin-bottom: 2.5em;
@@ -63,14 +63,16 @@
 
 .btn-view {
   display: inline-block;
-  background-color: #007bff;
-  color: white;
+  background-color: #ffffff;
+  color: #6E95DC;
+  font-weight: bolder;
   padding: 8px 12px;
-  border-radius: 5px;
+  border: 2px solid #B9D0FC;
+  border-radius: 8px;
   text-decoration: none;
   margin-top: 10px;
 }
 
 .btn-view:hover {
-  background-color: #0056b3;
+  background-color: rgba(110, 149, 220, 0.1);
 }
