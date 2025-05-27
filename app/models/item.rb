@@ -8,8 +8,8 @@ class Item < ApplicationRecord
 
   def average_rating
     reviews_scope = Review.where(item_id: id)
-    return reviews_scope.pluck(:rating).sum / reviews_scope.count.to_f if reviews_scope.present?
+    return 0.0 if reviews_scope.empty?
 
-    0
+    reviews_scope.pluck(:rating).sum / reviews_scope.count.to_f if reviews_scope.present?
   end
 end
