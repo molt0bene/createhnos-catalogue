@@ -12,6 +12,10 @@
   padding-left: 8px;
 }
 
+.nav-right-link i {
+  font-size: 80%;
+}
+
 .title-md, .title {
   font-size: 150%;
 }
@@ -30,6 +34,10 @@
 
 .text-semi-bold {
   font-weight: 400;
+}
+
+.text-lighter {
+  font-weight: lighter;
 }
 
 .custom-list {

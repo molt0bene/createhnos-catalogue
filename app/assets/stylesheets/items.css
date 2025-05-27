@@ -66,13 +66,69 @@
   background-color: #ffffff;
   color: #6E95DC;
   font-weight: bolder;
+  font-size: 70%;
   padding: 8px 12px;
   border: 2px solid #B9D0FC;
   border-radius: 8px;
   text-decoration: none;
-  margin-top: 10px;
+  max-width: 72px;
+}
+
+.btn.btn-view i {
+  font-size: 50%;
 }
 
 .btn-view:hover {
   background-color: rgba(110, 149, 220, 0.1);
+}
+
+.item-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 12px;
+}
+
+.item-rating i {
+  font-size: 2em;
+  color: #FFA645;
+  line-height: 1;
+}
+
+.item-rating .fa-regular {
+  color: #E0E0E0;
+}
+
+.item-card-title {
+  font-size: 125%;
+  text-align: left;
+  margin-left: 6%;
+}
+
+.rating-value {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.item-price-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  color: #1D1D1F;
+  font-weight: 500;
+  margin-left: 6%;
+}
+
+.item-footer-element {
+  font-size: 100%;
+  align-items: center;
+  display: inline-flex;
+}
+
+.currency-symbol {
+  margin-left: 2px;
+  font-size: 105%;
 }
