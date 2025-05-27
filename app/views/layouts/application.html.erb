@@ -2,13 +2,14 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="<%= form_authenticity_token %>">
 
   <title>Creative Technologies Catalogue</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -50,16 +51,13 @@
 
   <!-- Виртуальный помощник -->
   <div id="assistant" class="assistant-hidden">
-    <img src="<%= asset_path('assistant/assistant-hid.png') %>" id="assistant-img" alt="Помощник" data-hid="<%= asset_path('assistant/assistant-hid.png') %>" data-start="<%= asset_path('assistant/assistant-start.png') %>"/>
-
-    <div id="assistant-dialog">
-      <p class="dialog-title">Нужна помощь?</p>
-      <div class="dialog-buttons">
-        <button onclick="handleAssistantChoice('yes')">Да, помоги мне с выбором</button>
-        <button onclick="handleAssistantChoice('no')">Нет, спасибо</button>
-      </div>
-    </div>
+    <img src="<%= asset_path('assistant/assistant-hid.png') %>" id="assistant-img"
+         alt="Помощник"
+         data-hid="<%= asset_path('assistant/assistant-hid.png') %>"
+         data-start="<%= asset_path('assistant/assistant-start.png') %>" />
+    <div id="assistant-dialog"></div>
   </div>
+
 
 
   <%= yield %>
@@ -106,7 +104,6 @@
   });
 </script>
 <script>
-  console.log('toggle click')
   document.addEventListener('DOMContentLoaded', () => {
     const toggleLink = document.getElementById('navToggle');
     const menu       = document.getElementById('navMenu');
@@ -158,34 +155,34 @@
     });
   });
 </script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const assistant = document.getElementById("assistant");
-    const assistantImg = document.getElementById("assistant-img");
+<!--<script>-->
+<!--  document.addEventListener("DOMContentLoaded", () => {-->
+<!--    const assistant = document.getElementById("assistant");-->
+<!--    const assistantImg = document.getElementById("assistant-img");-->
 
-    let isExpanded = false;
-    const imgHid = assistantImg.dataset.hid;
-    const imgStart = assistantImg.dataset.start;
+<!--    let isExpanded = false;-->
+<!--    const imgHid = assistantImg.dataset.hid;-->
+<!--    const imgStart = assistantImg.dataset.start;-->
 
-    assistantImg.addEventListener("click", () => {
-      isExpanded = !isExpanded;
-      assistant.classList.toggle("expanded", isExpanded);
-      assistant.classList.toggle("assistant-hidden", !isExpanded);
-      assistantImg.src = isExpanded ? imgStart : imgHid;
-    });
+<!--    assistantImg.addEventListener("click", () => {-->
+<!--      isExpanded = !isExpanded;-->
+<!--      assistant.classList.toggle("expanded", isExpanded);-->
+<!--      assistant.classList.toggle("assistant-hidden", !isExpanded);-->
+<!--      assistantImg.src = isExpanded ? imgStart : imgHid;-->
+<!--    });-->
 
-    window.handleAssistantChoice = function (choice) {
-      if (choice === "yes") {
-        alert("Отлично! Сейчас подберем товары.");
-        // вставьте вызов вашего функционала
-      } else {
-        isExpanded = false;
-        assistant.classList.remove("expanded");
-        assistant.classList.add("assistant-hidden");
-        assistantImg.src = imgHid;
-      }
-    };
-  });
-</script>
+<!--    window.handleAssistantChoice = function (choice) {-->
+<!--      if (choice === "yes") {-->
+<!--        alert("Отлично! Сейчас подберем товары.");-->
+<!--        // вставьте вызов вашего функционала-->
+<!--      } else {-->
+<!--        isExpanded = false;-->
+<!--        assistant.classList.remove("expanded");-->
+<!--        assistant.classList.add("assistant-hidden");-->
+<!--        assistantImg.src = imgHid;-->
+<!--      }-->
+<!--    };-->
+<!--  });-->
+<!--</script>-->
 </body>
 </html>

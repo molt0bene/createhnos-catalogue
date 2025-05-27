@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_05_22_072043) do
+ActiveRecord::Schema[7.1].define(version: 2025_05_27_224220) do
   create_table "favourite_items", force: :cascade do |t|
     t.integer "user_id"
     t.integer "item_id"
@@ -27,6 +27,8 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_22_072043) do
     t.datetime "updated_at", null: false
     t.text "image_paths"
     t.float "rating", default: 0.0
+    t.string "category"
+    t.string "color"
   end
 
   create_table "order_requests", force: :cascade do |t|
@@ -60,4 +62,5 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_22_072043) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 end

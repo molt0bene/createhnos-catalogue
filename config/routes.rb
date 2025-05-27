@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :items do
     resources :reviews, only: %i[new create show]
   end
+
+  post "assistant/recommend", to: "assistant#recommend"
 end
