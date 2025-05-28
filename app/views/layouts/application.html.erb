@@ -63,7 +63,7 @@
   <%= yield %>
 
   <footer class="footer">
-    <p>&copy; 2023-2025 Createhnologies. Все права защищены.</p>
+    <p class="title-sm">&copy; 2023-2025 Createhnologies. Все права защищены.</p>
   </footer>
 </div>
 
@@ -114,8 +114,8 @@
       // переключаем видимость меню
       menu.classList.toggle('show');
       // меняем стрелку
-      icon.classList.toggle('fa-chevron-down');
-      icon.classList.toggle('fa-chevron-up');
+      icon.classList.toggle('fa-caret-down');
+      icon.classList.toggle('fa-caret-up');
     });
 
     // Скрывать меню при клике вне его
@@ -123,8 +123,8 @@
       if (!toggleLink.contains(e.target) && !menu.contains(e.target)) {
         if (menu.classList.contains('show')) {
           menu.classList.remove('show');
-          icon.classList.add('fa-chevron-down');
-          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-caret-down');
+          icon.classList.remove('fa-caret-up');
         }
       }
     });

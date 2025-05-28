@@ -16,6 +16,28 @@
 </div>
 
 <div class="section mt-lg">
+  <div class="new-review-form">
+    <p class="mt-sm mb-md title-sm">Оставьте ваш отзыв:</p>
+
+    <%= form_with url: item_reviews_path(@item), scope: :review, local: true do |form| %>
+      <div class="star-rating">
+        <% (5).downto(1).each do |i| %>
+          <%= form.radio_button :rating, i, id: "star-#{i}", class: "star-input" %>
+          <label for="star-#{i}" class="star-label" data-value="<%= i %>">
+            <i class="fa-solid fa-star"></i>
+          </label>
+        <% end %>
+      </div>
+
+      <p><%= form.text_field :first_name, placeholder: 'Имя*', class: 'form-text-field' %>
+        <%= form.text_field :last_name, placeholder: 'Фамилия', class: 'form-text-field' %></p>
+      <p><%= form.text_field :email, placeholder: 'Email*', class: 'form-text-field' %>
+        <%= form.text_field :comment, placeholder: 'Текст отзыва*', class: 'form-text-field' %></p>
+      <p>
+        <%= form.submit "Отправить!", class: 'button text-semi-bold' %>
+      </p>
+    <% end %>
+  </div>
   <h3>Последние отзывы на товар <%= @item.name %></h3>
 
   <% if @reviews.any? %>
@@ -39,27 +61,4 @@
       </div>
     </div>
   <% end %>
-
-  <div class="new-review-form">
-    <p class="mt-sm mb-md title-sm">Оставьте ваш отзыв:</p>
-
-    <%= form_with url: item_reviews_path(@item), scope: :review, local: true do |form| %>
-      <div class="star-rating">
-        <% (5).downto(1).each do |i| %>
-          <%= form.radio_button :rating, i, id: "star-#{i}", class: "star-input" %>
-          <label for="star-#{i}" class="star-label" data-value="<%= i %>">
-            <i class="fa-solid fa-star"></i>
-          </label>
-        <% end %>
-      </div>
-
-      <p><%= form.text_field :first_name, placeholder: 'Имя*', class: 'form-text-field' %>
-        <%= form.text_field :last_name, placeholder: 'Фамилия', class: 'form-text-field' %></p>
-      <p><%= form.text_field :email, placeholder: 'Email*', class: 'form-text-field' %>
-        <%= form.text_field :comment, placeholder: 'Текст отзыва*', class: 'form-text-field' %></p>
-      <p>
-        <%= form.submit "Отправить!", class: 'button text-semi-bold' %>
-      </p>
-    <% end %>
-  </div>
 </div>
