@@ -116,26 +116,35 @@
   }
 
   .item-card h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0;
+    font-size: 1.1rem;
   }
 
   h3 { font-size: 100%; }
 
   .items-grid {
-    grid-template-columns: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr));
+    gap: 20px;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    font-size: 80%;
+    /*padding: 0px;*/
   }
+
+  .item-footer-article { display: none; }
 
   .title-sm {
     font-size: 90%;
   }
+
+  .item-rating { font-size: 90%; }
 }
 
 @media (max-width: 440px) {
   .nav-element-text a { font-size: 0.6rem; }
 
   .on-image-btn {
-    font-size: 40%;
+    font-size: 50%;
   }
 
   .item-title {
@@ -159,10 +168,10 @@
   .form-text-field {
     border: 2px solid #A7BEEA;
     border-radius: 20px;
-    width: 25%;
+    /*width: 20%;*/
     height: 3em;
     padding-left: 2em;
-    font-size: 90%;
+    font-size: 80%;
   }
 
   .button {
