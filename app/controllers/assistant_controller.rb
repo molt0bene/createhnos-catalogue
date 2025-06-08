@@ -6,7 +6,7 @@ class AssistantController < ApplicationController
 
     items = Item.all
     items = items.where(category: filters[:category]) if filters[:category].present?
-    items = items.where(color: filters[:color]) if filters[:color].present?
+    items = items.where(color: filters[:color]) if filters[:color].present? && filters[:color] != 'Без разницы'
 
     if filters[:price].present?
       case filters[:price]
@@ -16,6 +16,6 @@ class AssistantController < ApplicationController
       end
     end
 
-    render json: items.limit(3).map { |p| { name: p.name, url: item_url(p) } }
+    render json: items.limit(2).map { |p| { name: p.name, url: item_url(p) } }
   end
 end
