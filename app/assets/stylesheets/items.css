@@ -104,6 +104,9 @@
   font-size: 125%;
   text-align: left;
   margin-left: 6%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .rating-value {
