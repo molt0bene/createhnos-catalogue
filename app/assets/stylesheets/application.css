@@ -90,4 +90,10 @@ a:hover {
   border-radius: 50%;
 }
 
+@font-face {
+  font-family: 'Heading Now';
+  src: url('/app/assets/fonts/heading-now.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
