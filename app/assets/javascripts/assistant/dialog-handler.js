@@ -36,13 +36,10 @@ window.renderDialog = function(stepKey) {
 
         if (data.length === 0) {
           title.textContent = "У нас пока нет таких товаров...";
-
           resultsList.innerText = "Но наш ассортимент постоянно пополняется. Следите за обновлениями 😊";
         } else {
           title.textContent = "Вот что я нашёл:";
 
-          const resultsList = document.createElement("div");
-          resultsList.style.marginTop = "10px";
           data.forEach((product) => {
             const link = document.createElement("a");
             link.href = product.url;
